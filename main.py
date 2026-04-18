@@ -10,7 +10,8 @@ app = FastAPI()
 # IMPORTANT: Allows your GitHub frontend to talk to this backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+    allow_origins=["*"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
